@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="main-container"></div>
+    </body>
+    <script src="icon.js"></script>
+    <script src="https://at.alicdn.com/t/c/font_4672366_5rxglyhvjue.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 创建图标实例
+            const fileIcon = new Icon('file');
+            const folderIcon = new Icon('folder');
+            const rightIcon = new Icon('right');
+            const downIcon = new Icon('down');
+
+            // 将图标添加到容器中
+            document.getElementById('main-container').appendChild(fileIcon.svg);
+            document.getElementById('main-container').appendChild(folderIcon.svg);
+            document.getElementById('main-container').appendChild(rightIcon.svg);
+            document.getElementById('main-container').appendChild(downIcon.svg);
+
+            // 测试更新图标名称
+            setTimeout(() => {
+                fileIcon.setName('folder');
+            }, 2000);
+        });
+    </script>
+</html>
